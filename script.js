@@ -195,6 +195,40 @@ function validate() {
         document.getElementById("passfail").innerHTML = "Password should be between 10 and 100 characters";
         res = 0;
     }
+    // regex for email
+    let patternemail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    // match the email with the pattern
+    if (!patternemail.test(email)) {
+        // make the border red
+        document.getElementById("email").style.boxShadow = "0 0 5px red";
+        document.getElementById("email").style.border = "2px solid red";
+        document.getElementById("emailfail").visibility = "visible";
+        document.getElementById("emailfail").innerHTML = "Improper Email Format";
+        res = 0;
+    }
+    // regex for phone number
+    let patternphno = /^[0-9]{10}$/;
+    // match the phone number with the pattern
+    if (!patternphno.test(phno)) {
+        // make the border red
+        document.getElementById("phno").style.boxShadow = "0 0 5px red";
+        document.getElementById("phno").style.border = "2px solid red";
+        document.getElementById("phnofail").visibility = "visible";
+        document.getElementById("phnofail").innerHTML = "Phone number should be 10 digits";
+        res = 0;
+    }
+    // zip code regex
+    let patternzip = /^[0-9]{5}$/;
+    // match the zip code with the pattern
+    if (!patternzip.test(zip)) {
+        // make the border red
+        document.getElementById("zip").style.boxShadow = "0 0 5px red";
+        document.getElementById("zip").style.border = "2px solid red";
+        document.getElementById("zipfail").visibility = "visible";
+        document.getElementById("zipfail").innerHTML = "Zip code should be 5 digits";
+        res = 0;
+    }
+
     if (nam == "") {
         // box shadow red
         document.getElementById("name").style.boxShadow = "0 0 5px red";
