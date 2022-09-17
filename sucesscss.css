@@ -1,0 +1,33 @@
+body{
+    background-image: none;
+    background-color: beige;
+}
+main{
+    display: block;
+    text-align: center;
+    align-items: center;
+}
+.sub{
+    margin-left: 40vw;
+
+}
+
+footer{
+    position: fixed;
+    bottom: 0%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    main{
+        padding: 3vw;
+    }
+    .sub{
+        margin-left: 14vw;
+        margin-top: 3vh;
+    }
+    footer{
+        position: fixed;
+        bottom: 0%;
+    }
+}

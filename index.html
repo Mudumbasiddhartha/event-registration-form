@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT Event Registration Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+    <!-- link external java script -->
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <img src="/imgs/android-chrome-512x512.png" alt="vitlogo">
+        <h1>VIT EVENT REGISTRATION PORTAL</h1>
+    </header>
+
+    <main>
+
+        <section class="frm">
+            <form method="get" name = "myform" onsubmit="return validate()" action="success.html">
+                <div class="notsubmit">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required title="Name"> <br>
+                    <div id = "namefail" class = "errors"></div><br>
+                    <label for="regno">Registration Number</label><div id="regerror"></div>
+                    <input type="text" name="regno" id="regno" required title=" VIT Registration number" > <br>
+                    <div id = "regnofail" class = "errors"></div><br>
+                    <label for="phno">Mobile Number</label>
+                    <input type="text" pattern="\d*"  maxlength="10" name = "phno" id = "phno" required title="Enter your mobile number"><br>
+                    <!-- <input type="number" name="phno" id="phno" required title=" Mobile Number" maxlength="10" minlength="10" ><br> -->
+                    <div id = "phnofail" class = "errors"></div><br>
+                    <label for="email">VIT Email ID</label>
+                    <input type="email" name="email" id="email" required title=" VIT Email id"><br>
+                    <div id = "emailfail" class = "errors"></div><br>
+                    <label for="pass">VTOP Password</label>
+                    <input type="password" name="pass" id="pass" required title=" VTOP Password" minlength="10"><br>
+                    <div id = "passfail" class = "errors"></div><br>
+                    <div id="eventselect"></div>
+                    <label for="event" >Select The event</label>
+                    <select name="event" id="event" >
+                        <option value="none" selected disabled hidden>Select an Option</option>
+                        <optgroup label="Technical Events">
+                            <option value="codechef">codechef hackathon</option>
+                            <option value="ecell">E-cell hackathon</option>
+                        </optgroup>
+                        <optgroup label="Cultural Events">
+                            <option value="telugu">Telugu Event</option>
+                            <option value="tamil">Tamil Event</option>
+                        </optgroup>
+                    </select><div class="errors" id = "selectfail"></div>
+                    <br><br><label for="zip">ZIP Code</label>
+                    <input type="number" name="zip" id="zip" required title="5 digit ZIP code" minlength="5" maxlength="5"><br>
+                    <div id = "zipfail" class = "errors"></div><br>
+                </div>
+                <div><input type="submit" value="SUBMIT" class="sub"></div>
+                
+
+            </form>
+
+        </section>
+    </main>
+    <footer><h3>For more details visit <a href="https://vit.ac.in">VIT-Vellore</a></h3></footer>
+
+</body>
+
+</html>
