@@ -196,7 +196,7 @@ function validate() {
         res = 0;
     }
     // regex for email
-    let patternemail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    let patternemail = /^[a-zA-Z][a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     // match the email with the pattern
     if (!patternemail.test(email)) {
         // make the border red
